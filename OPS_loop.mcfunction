@@ -16,7 +16,7 @@ execute @e[tag=isSleeping,score_OPSsleep=1] ~ ~ ~ tellraw @a ["",{"selector":"@s
 execute @a[score_OPSsleep_min=110] ~ ~ ~ time add 10
 execute @a[score_OPSsleep_min=300,score_OPSsleep=301] ~ ~ ~ weather thunder 1
 
-function essentials:ops/OPS_kicked if @a[score_OPSkickBed_min=1]
+function One-Player-Sleep:OPS_kicked if @a[score_OPSkickBed_min=1]
 
 scoreboard players tag @a[tag=isSleeping] remove isSleeping {Sleeping:0b}
 scoreboard players set @e[type=Player,tag=!isSleeping] OPSsleep 0
